@@ -1,30 +1,34 @@
 SINKINGSHIP_PIC = ['''
-      ______        
+      ______
      /     /
- ___/_____/___    
- \           / 
+ ___/_____/___
+ \           /
   \_________/ ''', '''
 
-      ______        
+      ______
      /     /
- ___/_____/___    
- \           / 
+ ___/_____/___
+ \           /
   \         /''', '''
 
-      ______        
+      ______
      /     /
- ___/_____/___    
+ ___/_____/___
  \           /''', '''
- 
-      ______        
+
+      ______
      /     /
  ___/_____/___''', '''
 
-      ______        
+      ______
      /     /
     /     /''', '''
-   
-     ______        
+
+     ______
     /     /''', '''
 
      ______''']
+
+gamesWords = 'sign vat insure illustrate management sport praise comfort experienced insistence side lonely shine monk soldier restrict rubbish fraud warrant hand image revoke execute cycle functional burst rehabilitation herb grandmother'
+
+
