@@ -29,6 +29,10 @@ SINKINGSHIP_PIC = ['''
 
      ______''']
 
-gamesWords = 'sign vat insure illustrate management sport praise comfort experienced insistence side lonely shine monk soldier restrict rubbish fraud warrant hand image revoke execute cycle functional burst rehabilitation herb grandmother'
+# gamesWords = 'sign vat insure illustrate management sport praise comfort experienced insistence side lonely shine monk soldier
+# restrict rubbish fraud warrant hand image revoke execute cycle functional burst rehabilitation herb grandmother'
 
 
+word = 'COLIN'
+secretWord = list(len(word)*'_')
+print(secretWord)
