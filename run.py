@@ -34,6 +34,7 @@ SINKINGSHIP_PIC = ['''
 
 
 wordSelection = 'COLIN'
+wordSelection = wordSelection.lower()
 secretWord = list(len(wordSelection)*'_')
 
 
@@ -42,7 +43,7 @@ gameState = False
 
 
 def guess_letter(letter, wordSelection):
-    gobal secretWord
+    global secretWord
     for i in range(0, len(wordSelection)):
         letter = wordSelection[i]
         if guess == letter:
@@ -60,7 +61,7 @@ while gameState == False and livesLeft > 0:
     if guess == wordSelection:
         gameState = True
     if len(guess) == 1 and guess in wordSelection:
-        gameState = check_letter(guess, wordSelection)        
+        gameState = guess_letter(guess, wordSelection)        
     else:
         livesLeft -= 1
 
