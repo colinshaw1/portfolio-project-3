@@ -56,7 +56,7 @@ def display():
     Funtcion to display ships and current status
     '''
     print(SINKINGSHIP_PIC[6-livesLeft])
-    print(f'You have {livesLeft} left')
+    print(f'You have {livesLeft} lives left')
     print(secretWord)
 
 while gameState == False and livesLeft > 0:
