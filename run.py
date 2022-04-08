@@ -40,6 +40,18 @@ secretWord = list(len(wordSelection)*'_')
 livesLeft = 6
 gameState = False
 
+
+def guess_letter(letter, wordSelection):
+    gobal secretWord
+    for i in range(0, len(wordSelection)):
+        letter = wordSelection[i]
+        if guess == letter:
+            wordSelection[i] = guess
+    if '_' not in secretWord:
+        return True
+    else:
+        return False
+
 while gameState == False and livesLeft > 0:
     print(secretWord)
     guess = input('Please enter a letter: ')
@@ -48,12 +60,7 @@ while gameState == False and livesLeft > 0:
     if guess == wordSelection:
         gameState = True
     if len(guess) == 1 and guess in wordSelection:
-        for i in range(0, len(wordSelection)):
-          letter = wordSelection[i]
-          if guess == letter:
-            wordSelection[i] = guess
-        if '_' not in secretWord:
-            gameState = True
+        gameState = check_letter(guess, wordSelection)        
     else:
         livesLeft -= 1
 
