@@ -29,9 +29,6 @@ SINKINGSHIP_PIC = ['''
 
      ______''']
 
-# gamesWords = 'sign vat insure illustrate management sport praise comfort experienced insistence side lonely shine monk soldier
-# restrict rubbish fraud warrant hand image revoke execute cycle functional burst rehabilitation herb grandmother'
-
 
 wordSelection = 'COLIN'
 wordSelection = wordSelection.upper()
@@ -41,7 +38,10 @@ gameState = False
 
 
 def guess_letter(letter, wordSelection):
-    global secretWord
+    '''
+    This function checkt to see if a letter in a word from the word selection
+    '''
+    global secretWord 
     for i in range(0, len(wordSelection)):
         letter = wordSelection[i]
         if guess == letter:
@@ -68,7 +68,6 @@ def playAgian():
     return input().upper.starswith('y')
 
 while gameState == False and livesLeft > 0:
-    print(secretWord)
     guess = input('Please enter a letter: ')
     guess = guess.upper()
 
@@ -84,4 +83,4 @@ while gameState == False and livesLeft > 0:
 if gameState:
     print(f"Yes the word was {wordSelection}! You are the winnner")
 else:
-    print(f"You lose the word was: {wordSelection}!")
+    print(f"You lose this round of sinking ships, the word was: {wordSelection}!")
