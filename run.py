@@ -1,4 +1,4 @@
-import os
+import os, random
 SINKINGSHIP_PIC = ['''
       ______
      /     /
@@ -30,8 +30,61 @@ SINKINGSHIP_PIC = ['''
 
      ______''']
 
+#words taken from Random word generator 50 in total
+wordSelection = '''
+goalkeeper
+improve
+stimulation
+deprive
+school
+theft
+language
+pull
+file
+couple
+rape
+forecast
+site
+call
+therapist
+joy
+dish
+chair
+obligation
+president
+cemetery
+formation
+simplicity
+affair
+vague
+calm
+black
+contain
+departure
+blade
+cancel
+subject
+powder
+cast
+mean
+sustain
+course
+ideology
+flatware
+sum
+outlook
+brown
+conservative
+lean
+tongue
+lung
+roll
+dollar
+communist
+contraction'''.split()
 
-wordSelection = 'COLIN'
+
+wordSelection = random.choice(wordSelection)
 wordSelection = wordSelection.upper()
 secretWord = list(len(wordSelection)*'_')
 livesLeft = 6
