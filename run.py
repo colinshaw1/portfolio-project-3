@@ -140,4 +140,15 @@ if gameState:
     print(f"Yes the word was {wordSelection}! You are the winnner")
 else:
     print(f"You lose this round of sinking ships, the word was: {wordSelection}!")
-    playAgian() 
+    # playAgian() 
+
+while True:
+    if gameState:
+        if playAgian():
+            wordSelection = random.choice(wordSelection)
+            wordSelection = wordSelection.upper()
+            secretWord = list(len(wordSelection)*'_')
+            livesLeft = 6
+            gameState = False
+        else:
+            break
