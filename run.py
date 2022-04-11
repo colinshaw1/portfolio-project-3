@@ -1,3 +1,4 @@
+import os
 SINKINGSHIP_PIC = ['''
       ______
      /     /
@@ -55,6 +56,7 @@ def display():
     '''
     Funtcion to display ships and current status
     '''
+    os.system("clear")
     print(SINKINGSHIP_PIC[6-livesLeft])
     print(f'You have {livesLeft} lives left')
     print(secretWord)
