@@ -110,9 +110,9 @@ def display():
     Funtcion to display ships and current status
     '''
     os.system("clear")
-    print(SINKINGSHIP_PIC[6-livesLeft])
+    print(SINKINGSHIP_PIC[6-livesLeft])    
+    print(' '.join([str(e) for e in secretWord]))#converts to a string and The join() method takes all items in an iterable and joins them into one string.
     print(f'You have {livesLeft} lives left')
-    print(secretWord)
 
 def playAgian():
     '''
@@ -120,7 +120,7 @@ def playAgian():
     if not return false
     '''
     print("Would you like to play another game of SinkingShips?(yes or no)")
-    return input().upper.starswith('y')
+    return input().upper.startswith('y')
 
 while gameState == False and livesLeft > 0:
     guess = input('Please enter a letter: ')
@@ -134,8 +134,10 @@ while gameState == False and livesLeft > 0:
     else:
         livesLeft -= 1
     display()
+   
 
 if gameState:
     print(f"Yes the word was {wordSelection}! You are the winnner")
 else:
     print(f"You lose this round of sinking ships, the word was: {wordSelection}!")
+    playAgian() 
