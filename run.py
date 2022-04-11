@@ -59,6 +59,14 @@ def display():
     print(f'You have {livesLeft} lives left')
     print(secretWord)
 
+def playAgian():
+    '''
+    Function to return true of the player wants to play again
+    if not return false
+    '''
+    print("Would you like to play another game of SinkingShips?(yes or no)")
+    return input().upper.starswith('y')
+
 while gameState == False and livesLeft > 0:
     print(secretWord)
     guess = input('Please enter a letter: ')
