@@ -57,7 +57,7 @@ contraction'''.split()
 
 def display():
     '''
-    Funtcion to display ships and current status
+    Function to display ships and current status
     '''
     os.system("clear")
     print(ship.SINKINGSHIP_PIC[6-livesLeft])
@@ -76,11 +76,13 @@ def startGame():
     global secretWord
     global livesLeft
     global gameState
+    global gameInProgress
 
     wordSelection = generateRandomWord()
     secretWord = generateSecretWord(wordSelection)
     livesLeft = 6
     gameState = False
+    gameInProgress = True
     display()
 
 startGame()
@@ -101,24 +103,22 @@ def guess_letter(letter, wordSelection):
     else:
         return False
 
-
-def playAgian():
+def playAgain():
     '''
     Function to return true of the player wants to play again
     if not return false
     '''
-    # print("Would you like to play another game of SinkingShips?(yes or no)")
-    # return input().upper.startswith('y')
-    global playGame
     playGame = input("Would you like to play another game of Sinking Ships? y = yes or n = no \n")
-    print(playGame)
     if playGame == "y":
         return startGame()
     elif playGame == "n":
         print("Thank you for playing Sinking Ships! See you soon")
         exit()
 
-while gameState == False and livesLeft == 0:
+while gameInProgress:
+    if livesLeft == 0:
+        playAgain()
+
     guess = input('Please enter a letter: ')
     guess = guess.upper()
 
@@ -130,20 +130,10 @@ while gameState == False and livesLeft == 0:
     else:
         livesLeft -= 1
     display()
-    
-   
-    # if gameState:
-    #     if playAgian():
-    #         wordSelection = random.choice(wordSelection)
-    #         wordSelection = wordSelection.upper()
-    #         secretWord = list(len(wordSelection)*'_')
-    #         gameState = False
-    #     else:
-    #         break
 
 if gameState:
     print(f"Yes the word was {wordSelection}! You are the winnner")
 else:
     print(
         f"You lose this round of sinking ships, the word was: {wordSelection}!")
-    playAgian()
+    playAgain()
