@@ -87,6 +87,14 @@ def startGame():
 
 startGame()
 
+def checkUserInput(userInput):
+    while userInput != "y" or userInput != "n":
+        if userInput == "y":
+            return startGame()
+        elif userInput == "n":
+            print("Thank you for playing Sinking Ships! See you soon")
+            exit()
+
 
 def guess_letter(letter, wordSelection):
     '''
@@ -108,19 +116,21 @@ def playAgain():
     Function to return true of the player wants to play again
     if not return false
     '''
-    playGame = input("Would you like to play another game of Sinking Ships? y = yes or n = no \n")
-    if playGame == "y":
-        return startGame()
-    elif playGame == "n":
-        print("Thank you for playing Sinking Ships! See you soon")
-        exit()
+    playGame = ''
+    while playGame.upper() != "Y" or playGame() != "N":
+        playGame = input("Would you like to play another game of Sinking Ships? y = yes or n = no \n").upper()
+        if playGame == "Y":
+            return startGame()
+        elif playGame == "N":
+            print("Thank you for playing Sinking Ships! See you soon")
+            exit()
+
 
 while gameInProgress:
     if livesLeft == 0:
         playAgain()
 
-    guess = input('Please enter a letter: ')
-    guess = guess.upper()
+    guess = input('Please enter a letter: ').upper()
 
     if guess == wordSelection:
         gameState = True
