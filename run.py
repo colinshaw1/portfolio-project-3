@@ -1,59 +1,7 @@
 import os
 import random
 import ship
-
-# words taken from Random word generator 50 in total
-wordSelection = '''
-goalkeeper
-improve
-stimulation
-deprive
-school
-theft
-language
-pull
-file
-couple
-rape
-forecast
-site
-call
-therapist
-joy
-dish
-chair
-obligation
-president
-cemetery
-formation
-simplicity
-affair
-vague
-calm
-black
-contain
-departure
-blade
-cancel
-subject
-powder
-cast
-mean
-sustain
-course
-ideology
-flatware
-sum
-outlook
-brown
-conservative
-lean
-tongue
-lung
-roll
-dollar
-communist
-contraction'''.split()
+import words
 
 def display():
     '''
@@ -68,8 +16,14 @@ def display():
 def generateSecretWord(word):
     return list(len(word)*'_')
 
-def generateRandomWord():
-    return random.choice(wordSelection).upper()
+def generateEasyRandomWord():
+    return random.choice(words.easyWordSelection).upper()
+
+def generateHardRandomWord():
+    return random.choice(words.hardWordSelection).upper()
+
+def chooseDifficulty():
+    return input('Press 1 for Easy, 2 for Hard')
 
 def startGame():
     global wordSelection
@@ -78,7 +32,13 @@ def startGame():
     global gameState
     global gameInProgress
 
-    wordSelection = generateRandomWord()
+    difficulty = chooseDifficulty()
+    print(difficulty)
+
+    if(difficulty == 1):
+        wordSelection = generateRandomWord()
+
+
     secretWord = generateSecretWord(wordSelection)
     livesLeft = 6
     gameState = False
@@ -86,14 +46,6 @@ def startGame():
     display()
 
 startGame()
-
-def checkUserInput(userInput):
-    while userInput != "y" or userInput != "n":
-        if userInput == "y":
-            return startGame()
-        elif userInput == "n":
-            print("Thank you for playing Sinking Ships! See you soon")
-            exit()
 
 
 def guess_letter(letter, wordSelection):
@@ -117,7 +69,7 @@ def playAgain():
     if not return false
     '''
     playGame = ''
-    while playGame.upper() != "Y" or playGame() != "N":
+    while playGame.upper() != "Y" or playGame.upper() != "N":
         playGame = input("Would you like to play another game of Sinking Ships? y = yes or n = no \n").upper()
         if playGame == "Y":
             return startGame()
