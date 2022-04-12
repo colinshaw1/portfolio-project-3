@@ -2,40 +2,40 @@ import os
 import random
 SINKINGSHIP_PIC = ['''
          \\
-      ____\\_____
+      _\\__
       \\        \\
-_______\\        \\______
+__\\        \\___
 \\                      /
  \\                    /
-  \\__________________/
-~~~~~~~~~~~~~~~~~~~~~~~~''', '''
+  \\________/
+~~~~~~~~''', '''
          \\
-      ____\\_____
+      _\\__
       \\        \\
-_______\\        \\______
+__\\        \\___
 \\                      /
  \\                    /
-~~~~~~~~~~~~~~~~~~~~~~~~''', '''
+~~~~~~~~''', '''
          \\
-      ____\\_____
+      _\\__
       \\        \\
-_______\\        \\______
+__\\        \\___
 \\                      /
-~~~~~~~~~~~~~~~~~~~~~~~~''', '''
+~~~~~~~~''', '''
          \\
-      ____\\_____
+      _\\__
       \\        \\
-_______\\        \\______
-~~~~~~~~~~~~~~~~~~~~~~~~''', '''
+__\\        \\___
+~~~~~~~~''', '''
          \\
-      ____\\_____
+      _\\__
       \\        \\
-~~~~~~~~~~~~~~~~~~~~~~~~''', '''
+~~~~~~~~''', '''
          \\
-      ____\\_____
-~~~~~~~~~~~~~~~~~~~~~~~~''', '''
+      _\\__
+~~~~~~~~''', '''
          \\
-~~~~~~~~~~~~~~~~~~~~~~~~''']
+~~~~~~~~''']
 
 # words taken from Random word generator 50 in total
 wordSelection = '''
@@ -91,11 +91,25 @@ communist
 contraction'''.split()
 
 
-wordSelection = random.choice(wordSelection)
-wordSelection = wordSelection.upper()
-secretWord = list(len(wordSelection)*'_')
-livesLeft = 6
-gameState = False
+def generateSecretWord(word):
+    return list(len(word)*'_')
+
+def generateRandomWord():
+    return random.choice(wordSelection).upper()
+
+def startGame():
+    global wordSelection
+    global secretWord
+    global livesLeft
+    global gameState
+
+    wordSelection = generateRandomWord()
+    secretWord = generateSecretWord(wordSelection)
+    livesLeft = 6
+    gameState = False
+    display()
+
+startGame()
 
 
 def guess_letter(letter, wordSelection):
@@ -134,15 +148,14 @@ def playAgian():
     # return input().upper.startswith('y')
     global playGame
     playGame = input("Would you like to play another game of Sinking Ships? y = yes or n = no \n")
-    while playGame not in ["y", "Y", "n", "N"]:
-        playGame = input("Would you like to play another game of Sinking Ships? y = yes or n = no \n")
+    print(playGame)
     if playGame == "y":
-        secretWord = True
+        return startGame()
     elif playGame == "n":
         print("Thank you for playing Sinking Ships! See you soon")
         exit()
 
-while gameState == False and livesLeft > 0:
+while gameState == False and livesLeft == 0:
     guess = input('Please enter a letter: ')
     guess = guess.upper()
 
@@ -171,6 +184,3 @@ else:
     print(
         f"You lose this round of sinking ships, the word was: {wordSelection}!")
     playAgian()
-
-
-
