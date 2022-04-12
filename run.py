@@ -23,7 +23,11 @@ def generateHardRandomWord():
     return random.choice(words.hardWordSelection).upper()
 
 def chooseDifficulty():
-    return input('Press 1 for Easy, 2 for Hard')
+    difficulty = ''
+    while difficulty != '1' or difficulty != '2':
+        difficulty = input('Type 1 for Easy, 2 for Hard \n')
+        if(difficulty == '1' or difficulty == '2'):
+            return difficulty
 
 def startGame():
     global wordSelection
@@ -33,10 +37,14 @@ def startGame():
     global gameInProgress
 
     difficulty = chooseDifficulty()
-    print(difficulty)
 
-    if(difficulty == 1):
-        wordSelection = generateRandomWord()
+    if(difficulty == '1'):
+        print('You have chosen an easy word')
+        wordSelection = generateEasyRandomWord()
+
+    elif(difficulty == '2'):
+        print('You have chosen a hard word')
+        wordSelection = generateHardRandomWord()
 
 
     secretWord = generateSecretWord(wordSelection)
@@ -80,22 +88,19 @@ def playAgain():
 
 while gameInProgress:
     if livesLeft == 0:
+        print(
+            f"You lose this round of sinking ships, the word was: {wordSelection}!")
         playAgain()
 
     guess = input('Please enter a letter: ').upper()
 
     if guess == wordSelection:
-        gameState = True
         secretWord = wordSelection
+        display()
+        print(f"Yes the word was {wordSelection}! You are the winnner")
+        playAgain()
     if len(guess) == 1 and guess in wordSelection:
         gameState = guess_letter(guess, wordSelection)
     else:
         livesLeft -= 1
     display()
-
-if gameState:
-    print(f"Yes the word was {wordSelection}! You are the winnner")
-else:
-    print(
-        f"You lose this round of sinking ships, the word was: {wordSelection}!")
-    playAgain()
