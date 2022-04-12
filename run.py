@@ -1,41 +1,6 @@
 import os
 import random
-SINKINGSHIP_PIC = ['''
-         \\
-      _\\__
-      \\        \\
-__\\        \\___
-\\                      /
- \\                    /
-  \\________/
-~~~~~~~~''', '''
-         \\
-      _\\__
-      \\        \\
-__\\        \\___
-\\                      /
- \\                    /
-~~~~~~~~''', '''
-         \\
-      _\\__
-      \\        \\
-__\\        \\___
-\\                      /
-~~~~~~~~''', '''
-         \\
-      _\\__
-      \\        \\
-__\\        \\___
-~~~~~~~~''', '''
-         \\
-      _\\__
-      \\        \\
-~~~~~~~~''', '''
-         \\
-      _\\__
-~~~~~~~~''', '''
-         \\
-~~~~~~~~''']
+import ship
 
 # words taken from Random word generator 50 in total
 wordSelection = '''
@@ -90,6 +55,15 @@ dollar
 communist
 contraction'''.split()
 
+def display():
+    '''
+    Funtcion to display ships and current status
+    '''
+    os.system("clear")
+    print(ship.SINKINGSHIP_PIC[6-livesLeft])
+    # converts to a string and The join() method takes all items in an iterable and joins them into one string.
+    print(' '.join([str(e) for e in secretWord]))
+    print(f'You have {livesLeft} lives left')
 
 def generateSecretWord(word):
     return list(len(word)*'_')
@@ -126,17 +100,6 @@ def guess_letter(letter, wordSelection):
         return True
     else:
         return False
-
-
-def display():
-    '''
-    Funtcion to display ships and current status
-    '''
-    os.system("clear")
-    print(SINKINGSHIP_PIC[6-livesLeft])
-    # converts to a string and The join() method takes all items in an iterable and joins them into one string.
-    print(' '.join([str(e) for e in secretWord]))
-    print(f'You have {livesLeft} lives left')
 
 
 def playAgian():
