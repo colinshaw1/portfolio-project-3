@@ -85,20 +85,25 @@ def playAgain():
             print("Thank you for playing Sinking Ships! See you soon")
             exit()
 
+def winGame():
+    display()
+    print(f"Yes the word was {wordSelection}! You are the winnner")
+    playAgain()
+    
+def loseGame():
+    print(
+        f"You lose this round of sinking ships, the word was: {wordSelection}!")
+    playAgain()
 
 while gameInProgress:
+    if not "_" in secretWord:
+        winGame()
+
     if livesLeft == 0:
-        print(
-            f"You lose this round of sinking ships, the word was: {wordSelection}!")
-        playAgain()
+        loseGame()
 
     guess = input('Please enter a letter: ').upper()
 
-    if guess == wordSelection:
-        secretWord = wordSelection
-        display()
-        print(f"Yes the word was {wordSelection}! You are the winnner")
-        playAgain()
     if len(guess) == 1 and guess in wordSelection:
         gameState = guess_letter(guess, wordSelection)
     else:
