@@ -114,8 +114,8 @@ def playAgain():
     '''
     playGame = ''
     while playGame.upper() != "Y" or playGame.upper() != "N":
-        playGame = input("Would you like to play another game of \
-             Sinking Ships? y = yes or n = no \n").upper()
+        playGame = input("Would you like to play another game of\
+ sinking Ships? y = yes or n = no \n").upper()
         if playGame == "Y":
             return startGame()
         elif playGame == "N":
@@ -139,8 +139,8 @@ def loseGame():
     and returns the play again function
     '''
     print(
-        f"You lose this round of sinking ships, \
-            the word was: {wordSelection}!")
+        f"You lose this round of sinking ships,\
+ the word was: {wordSelection}!")
     playAgain()
 
 
