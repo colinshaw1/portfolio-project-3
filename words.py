@@ -1,4 +1,7 @@
-# words taken from Random word generator 50 in total
+'''
+words taken from Random word generator 50 in total
+in easy selction the words are no more than 5 letters in length
+'''
 easyWordSelection = '''
 table
 sound
@@ -51,6 +54,10 @@ hobby
 video
 choke'''.split()
 
+'''
+words taken from Random word generator 50 in total
+in hard selction the words are no more than 8 letters in length
+'''
 hardWordSelection = '''
 emphasis
 unlawful
