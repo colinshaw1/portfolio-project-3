@@ -16,12 +16,24 @@ def display():
     print(f'You have {livesLeft} lives left')
 
 def generateSecretWord(word):
+    '''
+    Function to generate secret word. to return the length of the word 
+    from the list to the terminal
+    '''
     return list(len(word)*'_')
 
 def generateEasyRandomWord():
+    '''
+    Function to generate easy random word and pull the word form the 
+    easy word list in the word constant file
+    '''
     return random.choice(words.easyWordSelection).upper()
 
 def generateHardRandomWord():
+    '''
+    Function to generate hard random word and pull the word form the 
+    hard word list in the word constant file
+    '''
     return random.choice(words.hardWordSelection).upper()
 
 def chooseDifficulty():
@@ -32,41 +44,50 @@ def chooseDifficulty():
     words.py file and play a game with 8 words.
     '''
     difficulty = ''
+    #whiel loop to meet conditions that user input must be 1 or 2
     while difficulty != '1' or difficulty != '2':
         difficulty = input('Type 1 for Easy, 2 for Hard \n')
         if(difficulty == '1' or difficulty == '2'):
             return difficulty
 
 def startGame():
+    '''
+    Function to start game and set conditons for the game.
+    '''
+    #declare global variables 
     global wordSelection
     global secretWord
     global livesLeft
     global gameState
     global gameInProgress
 
+    #call difficulty function and set it equal to choosedifficulty 
     difficulty = chooseDifficulty()
-
+    #set diffuclty to 1 if user enters 1 and generate easy word
     if(difficulty == '1'):
         print('You have chosen an easy word')
         wordSelection = generateEasyRandomWord()
-
+    ##set diffuclty to 2 if user enters 2 and generate hard word
     elif(difficulty == '2'):
         print('You have chosen a hard word')
         wordSelection = generateHardRandomWord()
 
-
+    #set game varibales
     secretWord = generateSecretWord(wordSelection)
     livesLeft = 6
     gameState = False
     gameInProgress = True
     display()
 
+#call the starts game function so the game can run
 startGame()
 
 
 def guessLetter(letter, wordSelection):
     '''
-    This function checkt to see if a letter in a word from the word selection
+    Function guessLetter checks the users guess and see if it is in the
+    word selection and if it is return true and show the letter if not
+    return false
     '''
     global secretWord
     letter
@@ -81,7 +102,7 @@ def guessLetter(letter, wordSelection):
 
 def playAgain():
     '''
-    Function to return true of the player wants to play again
+    Functionplay again returns true if the player wants to play again
     if not return false
     '''
     playGame = ''
@@ -94,22 +115,35 @@ def playAgain():
             exit()
 
 def winGame():
+    '''
+    winGame function prints out the below statement if game is won
+    and returns the play again function 
+    '''
     display()
     print(f"Yes the word was {wordSelection}! You are the winnner")
     playAgain()
     
 def loseGame():
+    '''
+    loseGame function prints out the below statement if game is lost
+    and returns the play again function
+    '''
     print(
         f"You lose this round of sinking ships, the word was: {wordSelection}!")
     playAgain()
 
 while gameInProgress:
+    '''
+    While loop that call gameInProgress variable and iterates certain
+    steps while the game is playing
+    '''
+    #if no spaces left in secret word return wingame function
     if not "_" in secretWord:
         winGame()
-
+    #if lives equal 0 the return losegame function 
     if livesLeft == 0:
         loseGame()
-
+    #takes use input 
     guess = input('Please enter a letter: ').upper()
 
     if len(guess) == 1 and guess in wordSelection:
