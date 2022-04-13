@@ -1,31 +1,54 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+SINKING SHIPS
+--
+For my milestone project 3 for Code Institute Diploma in Software Development, I have chosen Project Example Idea 0. For this project I created a command line game called SinkingShips. The goal of the game is to guess all the letters in the word before your six lives run out. The game is pure chance butyou get the option for easy words with up to 5 letters or hard words with up to 8 letters choosen at random. 
 
-Welcome Colin Shaw ,
+Screenshots of Game
+--
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
 
-## Reminders
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+Who is this Game intended for?
+--
 
-## Creating the Heroku app
+Owner
+--
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+What does the game do?
+--
 
-1. `heroku/python`
-2. `heroku/nodejs`
+User Experience
+--
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+User Experience 5 Planes
+--
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+Strategy Plane
 
-Connect your GitHub repository and deploy as normal.
+Scope Plane
 
-## Constraints
+Structure Plane
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+Skeleton Plane
 
------
-Happy coding!
+Wireframes
+
+Surface Plane
+
+Features
+--
+
+Technologies used
+--
+
+Resources
+--
+
+Testing
+--
+
+Version Control
+--
+
+Deployment
+--
+
