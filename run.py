@@ -1,12 +1,14 @@
-import os
+#imports for constant files and random word selection and OS module
+import os 
 import random
 import ship
 import words
 
 def display():
     '''
-    Function to display ships and current status
+    Function to display ships and current status when a game is in progress 
     '''
+    #clears the terminal everytime a new game starts 
     os.system("clear")
     print(ship.SINKINGSHIP_PIC[6-livesLeft])
     # converts to a string and The join() method takes all items in an iterable and joins them into one string.
@@ -23,6 +25,12 @@ def generateHardRandomWord():
     return random.choice(words.hardWordSelection).upper()
 
 def chooseDifficulty():
+    '''
+    Function to choose difficulty level at the start of game 
+    choose 1 to take the easyword list from the constant words.py file
+    and play a game with max 5 words. Type 2 to choose the hardword list from the
+    words.py file and play a game with 8 words.
+    '''
     difficulty = ''
     while difficulty != '1' or difficulty != '2':
         difficulty = input('Type 1 for Easy, 2 for Hard \n')
@@ -56,7 +64,7 @@ def startGame():
 startGame()
 
 
-def guess_letter(letter, wordSelection):
+def guessLetter(letter, wordSelection):
     '''
     This function checkt to see if a letter in a word from the word selection
     '''
@@ -105,7 +113,7 @@ while gameInProgress:
     guess = input('Please enter a letter: ').upper()
 
     if len(guess) == 1 and guess in wordSelection:
-        gameState = guess_letter(guess, wordSelection)
+        gameState = guessLetter(guess, wordSelection)
     else:
         livesLeft -= 1
     display()
