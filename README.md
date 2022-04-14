@@ -72,36 +72,63 @@ Game Player
 6.	The Player has option y for a new game or n to end the game 
 7.	If player selects y the game runs again 
 
-User Experience 5 Planes
+User Experience
 --
 
 Strategy Plane
 
+Sinking ships was designed to make an easy and challanging word puzzle that is fun and make the user want to play mulitple times. The game is easy to use and steps are layed out well. 
+
 Scope Plane
+
+•	Created in HTML
+•	4 inputs commands taken for the terminal y = yes, n = no,  1 = easy , and 2 = hard
+•	The game takes the input of a letter for guesses
+
 
 Structure Plane
 
-Skeleton Plane
+The game is structed in the terminal, it is deployed and ran via Heroku.
 
-Wireframes
-
-Surface Plane
-
-Features
---
 
 Technologies used
 --
 
+•	Python is used to implement complex functions to start, run, and end the game
+•	Git for storing files and deployment 
+•	Heroku is used for final deployment and playability
+•	Gitpod for design
+
 Resources
 --
 
+•	Code institute for material and ideas
+•	Geeks for Geeks for information and ideas
+•	W3 Schools for information and ideas
+•	Slack for inspiration
+•	YouTube for tutorials
+•	My mentor Spencer Barbell was extremely helpful throughout the process
+
+
 Testing
 --
+• Passed validation through PEP8 online checker
+
+![image](https://user-images.githubusercontent.com/56481190/163461249-3ccf3dee-46f3-4394-9314-bc8a14b6c5af.png)
+
+• Game tested through terminal in Gitpod an dheroku
 
 Version Control
 --
 
+GitHub and GitPod to update and commit changed to my repository all commits tracked to mark progress
+
 Deployment
 --
 
+The project was deployed using Heroku's mock terminal
+• Clone reposotory
+• Create Heroku account
+• Set builds to Pyhton and set key to PORT and value to 8000
+• Link Heroku account to repository
+• Click Deploy
