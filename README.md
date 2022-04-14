@@ -125,7 +125,7 @@ Solved
 
 • Game kept resetting every time it was truthy in a while loop. Gem would exit because of statement after while loop gameState == False and livesLeft == 0: updated gameInprogress to play again once lives equaled 0
 
-• WWhen putting code through PEP a lot of whitespaces and only one space after function 
+• When putting code through PEP a lot of whitespaces and only one space after function 
 
 Remaining Bugs
 
