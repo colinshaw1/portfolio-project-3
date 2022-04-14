@@ -10,8 +10,11 @@ Screenshots of Game
 Who is this Game intended for?
 --
 
+The game is intended for anyone who has an intrest in computers and likes word puzzels. The game is used through the comamnd line so you will have to be familar with how a command line game works and running it before playing.
+
 Owner
 --
+The owner of this game is Colin Shaw. The goal is to help people switch off and enjoy a fun interactive game.
 
 What does the game do?
 --
