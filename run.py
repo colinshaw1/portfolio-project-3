@@ -156,7 +156,7 @@ while gameInProgress:
     if livesLeft == 0:
         loseGame()
     # takes user input
-    guess = input('Please enter a letter: ').upper()
+    guess = input('Please enter a letter:\n').upper()
 
     if len(guess) == 1 and guess in wordSelection:
         gameState = guessLetter(guess, wordSelection)
