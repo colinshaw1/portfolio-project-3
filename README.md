@@ -17,7 +17,8 @@ Sinking ships is a varaiation of the classic word puzzle game Hangman. In this v
 
 Screenshots of Game
 --
-
+Start game
+![image](https://user-images.githubusercontent.com/56481190/163455314-55c5d16b-039d-491c-a247-56bf0a0a464a.png)
 
 User Experience
 --
