@@ -20,6 +20,28 @@ Screenshots of Game
 Start game
 ![image](https://user-images.githubusercontent.com/56481190/163455314-55c5d16b-039d-491c-a247-56bf0a0a464a.png)
 
+Easy Game running 
+![image](https://user-images.githubusercontent.com/56481190/163455899-f2f383f4-5537-4011-b632-369acf2c9d09.png)
+
+After 4 guesses
+![image](https://user-images.githubusercontent.com/56481190/163456084-f27b7a24-9299-4f28-b61d-4007f65b8555.png)
+
+After losing a game 
+![image](https://user-images.githubusercontent.com/56481190/163456219-fe18f86d-4919-4eb0-9eb3-e63b5a52f6dc.png)
+
+Hard game running 
+![image](https://user-images.githubusercontent.com/56481190/163456740-769660e9-55d5-484b-9199-4e9c74cce274.png)
+
+After selecting y to play again
+![image](https://user-images.githubusercontent.com/56481190/163456407-3482f2f8-081c-47ae-82f3-bd64ce3e0b0f.png)
+
+After selecting n to end the game
+![image](https://user-images.githubusercontent.com/56481190/163456584-8a796352-00f7-4d02-879c-9a8d8694c584.png)
+
+Game won 
+![image](https://user-images.githubusercontent.com/56481190/163457035-495013ae-9c57-4906-a8ae-02f1dfa73fc2.png)
+
+
 User Experience
 --
 
