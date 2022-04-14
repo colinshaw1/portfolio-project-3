@@ -118,6 +118,18 @@ Testing
 
 • Game tested through terminal in Gitpod an dheroku
 
+Bugs
+
+Solved
+
+• Game kept reseting everytime it was truthy in while loop. Gem would exit because of statement after while loop gameState == False and livesLeft == 0: updated gameInprogress to play agian once lives equaled 0
+
+• When put code through PEP a lot of whitespaces and only one space after function 
+
+Remaining Bugs
+
+• None
+
 Version Control
 --
 
