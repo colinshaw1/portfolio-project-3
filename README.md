@@ -63,6 +63,15 @@ Game won
 User Experience
 --
 
+Game Player
+1.	The Player will run the game
+2.	The player will select difficulty 1 for easy or 2 for hard
+3.	The easy game runs the player has 6 lives to guess the 5 letters
+4.	The hard game runs the player has 6 lives to guess 8 letters 
+5.	If player runs out of lives the game ends the word is displayed
+6.	The Player has option y for a new game or n to end the game 
+7.	If player selects y the game runs again 
+
 User Experience 5 Planes
 --
 
