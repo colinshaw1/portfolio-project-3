@@ -1,13 +1,14 @@
 SINKING SHIPS
 --
-For my milestone project 3 for Code Institute Diploma in Software Development, I have chosen Project Example Idea 0. For this project I created a command line game called SinkingShips. The goal of the game is to guess all the letters in the word before your six lives run out. The game is pure chance butyou get the option for easy words with up to 5 letters or hard words with up to 8 letters choosen at random. 
+For my milestone project 3 for Code Institute Diploma in Software Development, I have chosen Project Example Idea 0. For this project, I created a command-line game called SinkingShips. The goal of the game is to guess all the letters in the word before your six lives run out. The game is a pure chance but you get the option of easy words with up to 5 letters or hard words with up to 8 letters chosen at random. 
 
-Please clink on the link to enjoy a game of Sinking Ships https://sinking-ships.herokuapp.com/
+Please click on the link to enjoy a game of Sinking Ships https://sinking-ships.herokuapp.com/
+
 
 Who is this Game intended for?
 --
 
-The game is intended for anyone who has an intrest in computers and likes word puzzels. The game is used through the comamnd line so you will have to be familar with how a command line game works and running it before playing.
+The game is intended for anyone who has an interest in computers and likes word puzzles. The game is used through the command line so you will have to be familiar with how a command-line game works and run it before playing.
 
 Owner
 --
@@ -15,7 +16,7 @@ The owner of this game is Colin Shaw. The goal is to help people switch off and 
 
 How to play
 --
-Sinking ships is a varaiation of the classic word puzzle game Hangman. In this version, the player has an option to enter 1 for an easy word which will be no more than 5 letters in length or choose 2 for hard whihc is 8 letters in length. The palyer has 6 lives to guess the word. Each time a letter is guessed the letetr appears on the display, the more you guess the easier it becomes to guess the word. The player must guess the word before the ship sinks. Once a game has ended the player has an option to select y for another game or n to end the current game. See below for pictures of how Sinking ships. 
+Sinking ships is a variation of the classic word puzzle game Hangman. In this version, the player has an option to enter 1 for an easy word which will be no more than 5 letters in length or choose 2 for hard which is 8 letters in length. The player has 6 lives to guess the word. Each time a letter is guessed the letter appears on the display, the more you guess the easier it becomes to guess the word. The player must guess the word before the ship sinks. Once a game has ended the player has an option to select y for another game or n to end the current game. See below for pictures of how Sinking ships. 
 
 Screenshots of Game
 --
@@ -77,7 +78,7 @@ User Experience
 
 Strategy Plane
 
-Sinking ships was designed to make an easy and challanging word puzzle that is fun and make the user want to play mulitple times. The game is easy to use and steps are layed out well. 
+Sinking ships were designed to make an easy and challenging word puzzle that is fun and makes the user want to play multiple times. The game is easy to use and the steps are laid out well. 
 
 Scope Plane
 
@@ -88,7 +89,7 @@ Scope Plane
 
 Structure Plane
 
-The game is structed in the terminal, it is deployed and ran via Heroku.
+The game is structured in the terminal, it is deployed and run via Heroku.
 
 
 Technologies used
@@ -116,15 +117,15 @@ Testing
 
 ![image](https://user-images.githubusercontent.com/56481190/163461249-3ccf3dee-46f3-4394-9314-bc8a14b6c5af.png)
 
-• Game tested through terminal in Gitpod an dheroku
+• Game tested through the terminal in Gitpod and heroku
 
 Bugs
 
 Solved
 
-• Game kept reseting everytime it was truthy in while loop. Gem would exit because of statement after while loop gameState == False and livesLeft == 0: updated gameInprogress to play agian once lives equaled 0
+• Game kept resetting every time it was truthy in a while loop. Gem would exit because of statement after while loop gameState == False and livesLeft == 0: updated gameInprogress to play again once lives equaled 0
 
-• When put code through PEP a lot of whitespaces and only one space after function 
+• WWhen putting code through PEP a lot of whitespaces and only one space after function 
 
 Remaining Bugs
 
@@ -139,8 +140,8 @@ Deployment
 --
 
 The project was deployed using Heroku's mock terminal
-• Clone reposotory
+• Clone repository
 • Create Heroku account
 • Set builds to Pyhton and set key to PORT and value to 8000
-• Link Heroku account to repository
+• Link Heroku account to the repository
 • Click Deploy
